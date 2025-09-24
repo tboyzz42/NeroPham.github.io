@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeroPham | Portfolio</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: Arial, sans-serif; line-height: 1.6; background: #f9f9f9; color: #333;}
+    header {background: #111; color: #fff; padding: 2rem 1rem; text-align: center;}
+    header h1 {font-size: 2.5rem; margin-bottom: .5rem;}
+    header p {font-size: 1.2rem; color: #aaa;}
+
+    nav {background: #222; display: flex; justify-content: center; gap: 2rem; padding: .8rem;}
+    nav a {color: #fff; text-decoration: none; font-weight: bold; transition: color .3s;}
+    nav a:hover {color: #00bcd4;}
+
+    section {max-width: 1000px; margin: 2rem auto; padding: 0 1rem;}
+    h2 {font-size: 2rem; margin-bottom: 1rem; color: #111; border-left: 5px solid #00bcd4; padding-left: .5rem;}
+    p {margin-bottom: 1rem;}
+
+    .skills, .projects {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;}
+    .card {background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    .card h3 {margin-bottom: .5rem;}
+
+    footer {text-align: center; padding: 2rem 1rem; background: #111; color: #aaa;}
+    footer a {color: #00bcd4; margin: 0 .5rem; text-decoration: none;}
+    footer a:hover {text-decoration: underline;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NeroPham</h1>
+    <p>Portfolio cá nhân • Developer • Designer</p>
+  </header>
+
+  <nav>
+    <a href="#about">Giới thiệu</a>
+    <a href="#skills">Kỹ năng</a>
+    <a href="#projects">Dự án</a>
+    <a href="#contact">Liên hệ</a>
+  </nav>
+
+  <section id="about">
+    <h2>Giới thiệu</h2>
+    <p>Xin chào, tôi là <strong>NeroPham</strong>. Tôi đam mê phát triển web, thiết kế UI/UX và luôn tìm cách tạo ra những sản phẩm sáng tạo, hữu ích cho người dùng.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Kỹ năng</h2>
+    <div class="skills">
+      <div class="card"><h3>Frontend</h3><p>HTML, CSS, JavaScript, React</p></div>
+      <div class="card"><h3>Backend</h3><p>Node.js, Express, MongoDB</p></div>
+      <div class="card"><h3>Khác</h3><p>UI/UX Design, Git, Agile</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Dự án</h2>
+    <div class="projects">
+      <div class="card"><h3>Portfolio Website</h3><p>Website cá nhân hiện tại, xây dựng bằng HTML/CSS/JS.</p></div>
+      <div class="card"><h3>Ứng dụng To-Do</h3><p>Ứng dụng quản lý công việc sử dụng React + LocalStorage.</p></div>
+      <div class="card"><h3>Blog Platform</h3><p>Hệ thống blog nhỏ viết bằng Node.js & MongoDB.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Liên hệ</h2>
+    <p>Email: <a href="mailto:neropham@example.com">neropham@example.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/neropham" target="_blank">linkedin.com/in/neropham</a></p>
+    <p>GitHub: <a href="https://github.com/NeroPham" target="_blank">github.com/NeroPham</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 NeroPham. Made with ❤️</p>
+  </footer>
+</body>
+</html>
