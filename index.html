@@ -3,216 +3,1032 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thang Pham Duy — Principal Talent Sourcing Specialist specializing in Technical Recruitment Research, Talent Intelligence, Executive Search and APAC Talent Mapping.">
+  <meta name="theme-color" content="#123B5D">
   <title>Thang Pham Duy | Principal Talent Sourcing Specialist</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-    body {font-family: Arial, sans-serif; line-height: 1.6; background: #f9f9f9; color: #333;}
-    
-    header {
-      background: #00aaff;   /* xanh da trời */
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
+    :root {
+      --navy: #123B5D;
+      --navy-2: #0B2B43;
+      --blue: #00A8E8;
+      --blue-soft: #EAF7FD;
+      --bg: #F7FAFC;
+      --surface: #FFFFFF;
+      --text: #17212B;
+      --muted: #65737E;
+      --border: #DFE7EC;
+      --shadow: 0 16px 45px rgba(18, 59, 93, .08);
+      --radius: 18px;
+      --max: 1120px;
     }
-    header h1 {font-size: 2.5rem; margin-bottom: .5rem;}
-    header p {font-size: 1.2rem; color: #e0f7ff;}
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.65;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* NAV */
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(223,231,236,.9);
+    }
 
     nav {
-      background: #0088cc;   /* xanh đậm hơn */
+      min-height: 72px;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: .8rem;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color .3s;
-    }
-    nav a:hover {color: #ffeb3b;}
 
-    section {max-width: 1000px; margin: 2rem auto; padding: 0 1rem;}
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #111;
-      border-left: 5px solid #00aaff; /* viền xanh */
-      padding-left: .5rem;
+    .brand {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      color: var(--navy);
+      white-space: nowrap;
     }
-    p {margin-bottom: 1rem;}
 
-    .skills, .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
     }
-    .card {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      border-top: 3px solid #00aaff;
-    }
-    .card h3 {margin-bottom: .5rem;}
 
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #00aaff;
-      color: #fff;
+    .nav-links a {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      transition: .2s ease;
     }
-    footer a {
-      color: #ffeb3b;
-      margin: 0 .5rem;
-      text-decoration: none;
+
+    .nav-links a:hover { color: var(--blue); }
+
+    .nav-cv {
+      padding: 10px 15px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #fff !important;
     }
-    footer a:hover {text-decoration: underline;}
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 24px;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 105px 0 70px;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(0,168,232,.17), transparent 30%),
+        linear-gradient(135deg, #F8FCFF 0%, #EEF7FB 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -180px;
+      bottom: -220px;
+      border: 1px solid rgba(0,168,232,.18);
+      border-radius: 50%;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: var(--blue);
+    }
+
+    h1 {
+      max-width: 850px;
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-size: clamp(19px, 2.5vw, 27px);
+      line-height: 1.3;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .hero-description {
+      max-width: 760px;
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
     .btn {
-      display: inline-block;
-      background: #00aaff;
-      color: white;
-      padding: 10px 20px;
-      margin-top: 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
     }
+
     .btn:hover {
-      background: #0088cc;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(18,59,93,.12);
+    }
+
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-secondary { background: #fff; color: var(--navy); border: 1px solid var(--border); }
+
+    /* METRICS */
+    .impact {
+      position: relative;
+      z-index: 2;
+      margin-top: -1px;
+      padding: 26px 0;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .metric {
+      padding: 8px 24px;
+      border-right: 1px solid rgba(255,255,255,.15);
+    }
+
+    .metric:first-child { padding-left: 0; }
+    .metric:last-child { border-right: 0; }
+
+    .metric-number {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -.04em;
+      line-height: 1;
+      margin-bottom: 7px;
+    }
+
+    .metric-label {
+      color: rgba(255,255,255,.7);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    /* SECTIONS */
+    section { padding: 90px 0; scroll-margin-top: 72px; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: .75fr 1.5fr;
+      gap: 45px;
+      margin-bottom: 42px;
+    }
+
+    .section-kicker {
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.12;
+      letter-spacing: -.035em;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 720px;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 28px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .card p + p { margin-top: 14px; }
+
+    .profile-facts {
+      display: grid;
+      gap: 14px;
+    }
+
+    .fact {
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .fact:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    .fact-label {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .fact-value {
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* EXPERTISE */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .expertise-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 24px;
+      transition: .2s ease;
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0,168,232,.45);
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .expertise-card h3 {
+      color: var(--navy);
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .expertise-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* TECHNOLOGY */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .tag {
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 999px;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .tag.accent {
+      background: var(--blue-soft);
+      border-color: rgba(0,168,232,.25);
+      color: #087CA8;
+    }
+
+    /* EXPERIENCE */
+    .timeline {
+      position: relative;
+      max-width: 930px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 10px;
+      bottom: 10px;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 42px;
+      margin-bottom: 38px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 15px;
+      height: 15px;
+      border: 4px solid var(--bg);
+      border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 0 1px var(--blue);
+    }
+
+    .timeline-date {
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .timeline-role {
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.25;
+      margin-bottom: 3px;
+    }
+
+    .timeline-company {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .timeline-list {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+    }
+
+    .timeline-list li {
+      position: relative;
+      padding-left: 17px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .timeline-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .achievement-box {
+      margin-top: 15px;
+      padding: 18px;
+      background: var(--blue-soft);
+      border: 1px solid rgba(0,168,232,.18);
+      border-radius: 13px;
+    }
+
+    .achievement-box strong {
+      display: block;
+      color: var(--navy);
+      font-size: 11px;
+      letter-spacing: .08em;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+    }
+
+    /* CLIENTS / MARKETS */
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .market-card {
+      min-height: 100%;
+      background: var(--navy);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 30px;
+    }
+
+    .market-card h3 {
+      font-size: 20px;
+      margin-bottom: 18px;
+    }
+
+    .market-tags .tag {
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.14);
+      color: #fff;
+    }
+
+    .client-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+    }
+
+    .client-list {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    /* EDUCATION / CERTIFICATION */
+    .credentials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .credential h3 {
+      color: var(--navy);
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+
+    .credential p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--navy-2);
+      color: #fff;
+    }
+
+    .contact .section-kicker { color: #66D5FF; }
+    .contact .section-title { color: #fff; }
+    .contact .section-intro { color: rgba(255,255,255,.7); }
+
+    .contact-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .contact-link {
+      padding: 13px 17px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 10px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .2s ease;
+    }
+
+    .contact-link:hover {
+      background: rgba(255,255,255,.13);
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 22px 0;
+      background: #081F30;
+      color: rgba(255,255,255,.55);
+      font-size: 11px;
+    }
+
+    footer .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .btn, .expertise-card, .contact-link { transition: none; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 65px;
+        padding: 14px;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+      }
+
+      .nav-links.open { display: flex; }
+      .nav-links a { display: block; padding: 10px 12px; }
+      .menu-btn { display: block; }
+      .about-grid,
+      .split-grid,
+      .credentials { grid-template-columns: 1fr; }
+      .expertise-grid { grid-template-columns: repeat(2, 1fr); }
+      .section-head { grid-template-columns: 1fr; gap: 12px; }
+      .metrics { grid-template-columns: repeat(2, 1fr); }
+      .metric { border-right: 0; padding: 15px 0; }
+      .metric:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.15); }
+    }
+
+    @media (max-width: 560px) {
+      .container { width: min(var(--max), calc(100% - 28px)); }
+      .hero { padding: 75px 0 55px; }
+      section { padding: 65px 0; }
+      .expertise-grid { grid-template-columns: 1fr; }
+      .metrics { grid-template-columns: 1fr 1fr; }
+      .metric-number { font-size: 25px; }
+      .metric-label { font-size: 9px; }
+      .card, .expertise-card, .market-card, .client-card { padding: 22px; }
+      footer .footer-inner { flex-direction: column; }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Thang Pham Duy</h1>
-    <p>Principal Talent Sourcing Specialist<p> 
-    <p>Technical Recruitment Research | Talent Intelligence | Executive Search | APAC Talent Mapping</p>
-  </header>
 
-  <nav>
-    <a href="#summary">Summary</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#responsibilities">Responsibilities</a>
-    <a href="#education">Education</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#interests">Interests</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- Navigation -->
+  <div class="nav-wrap">
+    <nav class="container">
+      <a class="brand" href="#top">THANG PHAM DUY</a>
 
-  <section id="summary">
-    <h2>Professional Summary</h2>
-    <p>Principal Talent Sourcing Specialist with 8+ years of experience supporting technical recruitment and talent intelligence initiatives across APAC, ASEAN, Australia, UK and US markets. Extensive experience in talent mapping, executive search, recruitment research, stakeholder management and pipeline development within consulting, technology and Build-Operate-Transfer (BOT) environments.</p>
-    <p>Trusted recruitment partner to enterprise clients delivering Build-Operate-Transfer (BOT) and strategic technology hiring projects across Australia, Vietnam, Thailand and the Philippines.</p>
-  </section>
+      <button class="menu-btn" aria-label="Open navigation" aria-expanded="false">☰</button>
 
-  <section id="skills">
-    <h2>CORE COMPETENCIES</h2>
-    <ul>
-      <h3>Talent Intelligence & Recruitment Research</h3>
-      <li>Technical Recruitment Research, Talent Mapping, Executive Search, Talent Pipeline Development.</li>
-      <h3>Sourcing Expertise</h3>
-      <li>LinkedIn Recruiter, Advanced Boolean Search, Google X-Ray Search.</li>
-      <h3>Recruitment Technology</h3>
-      <li>ATS Platforms, Recruitment CRM, AI-Assisted Sourcing.</li>
-      <h3>Markets: Vietnam, US, UK, Ireland, ASEAN, APAC</h3>
-    </ul>
-  </section>
-
-  <section id="experience">
-    <h2>Work Experience</h2>
-    <div class="card">
-      <h3>CBTW APAC — APAC Recruitment Research | Technical Talent Mapping </h3>
-      <p><em>Mar 2026 – Present | Ho Chi Minh City, Vietnam</em></p>
-      <ul>
-        <li> Elevated to Principal Talent Sourcing Specialist at CBTW APAC, focusing on enhancing recruitment strategies.</li>
-        <li> Committed to making significant contributions to the company's growth and talent acquisition efforts.</li>
-        <li> Collaborate with cross-functional teams to streamline recruitment processes and improve candidate experience.</li>
-        <h3>KEY ACHIEVEMENTS</h3>
-        <li> Achieved 20 successful placements during H1 2026 across Software Engineering, AI, Data, Cybersecurity and Technology Leadership functions.</li>
-        <li> Surpassed Mid-Year 2026 sourcing target by 32.84%, Offer target by 29% (62 Offer Points achieved versus 48 target), and Placement target by 152% (60.5 Placement Points achieved versus 24 target).</li>
-        <li> Closed critical and niche technology positions including Principal AI Product Owner, Principal AI Engineer, AI Solution Consultant, Delivery Lead, Data Engineer and Cyber Security Manager.</li>
-        <li> Demonstrated capability in hiring Senior, Lead, Principal and Management-level technology professionals.</li>
-        <li> Built strategic talent pipelines supporting AI Engineering, Data Engineering, Cloud, Software Development, Cybersecurity and Digital Transformation initiatives.</li>
-        
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="nav-cv" href="Thang_Pham_Duy_CV_Professional_2_Page.pdf" target="_blank" rel="noopener">Download CV</a></li>
       </ul>
-      <h3>CBTW APAC — Senior Talent Sourcing Specialist </h3>
-      <p><em>Mar 2022 – Mar 2026 | Ho Chi Minh City, Vietnam</em></p>
-      <ul>
-        <li>Key Clients: Mantel Group, Pepperstone, JobAdder, Fitness Passport, Hipages, ClickSend, CreditorWatch, Next Practice, Instaclustr, Infotrack, Deputy, CIMB. </li>
-        <li>Partner with APAC recruitment teams to build and maintain qualified talent pipelines for enterprise technology clients.</li>
-        <li>Support technical hiring initiatives across Australia, Vietnam, Thailand and the Philippines through talent mapping, candidate research and market intelligence activities.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>CBTW APAC — Talent Sourcing Specialist </h3>
-      <p><em>Aug 2020 – Mar 2022 | Ho Chi Minh City, Vietnam</em></p>
-      <ul>
-        <li>Key Clients: NAB – CBTW</li>
-        <li>Executed sourcing campaigns supporting technology hiring initiatives.</li>
-        <li>Evaluated candidate suitability based on technical competencies, compensation expectations and stakeholder requirements.</li>
-        <li>Built talent pools and supported recruiter delivery teams across technology projects.</li>
-        <li>Collaborated closely with recruiters to increase sourcing effectiveness and recruitment outcomes.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Vsource.io — Talent Sourcer</h3>
-      <p><em>Apr 2018 – Mar 2020</em></p>
-      <ul>
-        <li>Conducted candidate sourcing activities across US, UK, Ireland and ASEAN markets.</li>
-        <li>Sourced talent for software engineering, sales, marketing, management and executive-level positions.</li>
-        <li>Utilized advanced Boolean Search methodologies through LinkedIn, Google and niche talent platforms.</li>
-        <li>Supported executive search and recruitment research assignments across multiple industries.</li>
-      </ul>
-    </div>
-  </section>
+    </nav>
+  </div>
 
-  <section id="responsibilities">
-    <h2>Core Responsibilities</h2>
-    <ul>
-      <li>Interpret job descriptions and partner with recruiters to understand technical requirements and team culture</li>
-      <li>Build Boolean strings and run multi-channel searches; screen for skills, experience, salary, availability, and location</li>
-      <li>Create shortlists and share with Recruiter Consultants; iterate based on feedback to optimize search strategy</li>
-      <li>Manage responses, review CVs, maintain talent pools, and update in-house databases regularly</li>
-    </ul>
-  </section>
+  <main id="top">
 
-  <section id="education">
-    <h2>Education</h2>
-    <p><strong>Industrial University of HCMC</strong> — Business Administration | Associate’s degree</p>
-  </section>
+    <!-- Hero -->
+    <header class="hero">
+      <div class="container">
+        <div class="eyebrow">Principal Talent Sourcing Specialist</div>
+        <h1>Thang Pham Duy</h1>
+        <div class="hero-title">
+          Technical Recruitment Research · Talent Intelligence · Executive Search
+        </div>
+        <p class="hero-description">
+          APAC Talent Mapping · Strategic Technology Hiring · Recruitment Research
+        </p>
 
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <p><a href="https://www.linkedin.com/learning/certificates/28515900ed7ac6c1e59c4bae9e9cbbd7c7f2fc2a19fc5f6c11ceb55c686809ef" target="_blank">LinkedIn Talent Sourcing Certification</a></p>
-  </section>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#experience">View Experience</a>
+          <a class="btn btn-secondary" href="Thang_Pham_Duy_CV_Professional_2_Page.pdf" target="_blank" rel="noopener">Download CV</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/pdthang235/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </header>
 
-  <section id="interests">
-    <h2>Interests</h2>
-    <ul>
-      <li>Reading</li>
-      <li>Movies</li>
-      <li>Basketball</li>
-      <li>Craft beer</li>
-      <li>Traveling</li>
-    </ul>
-  </section>
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">Profile</div>
+            <h2 class="section-title">Recruitment research with a strategic mindset.</h2>
+          </div>
+          <p class="section-intro">
+            Principal Talent Sourcing Specialist with 8+ years of experience supporting technical recruitment
+            and talent intelligence initiatives across APAC, ASEAN, Australia, UK and US markets.
+          </p>
+        </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Name:</strong> Thang Pham Duy</p>
-    <p><strong>Title:</strong> Talent Sourcing Specialist</p>
-    <p><strong>Email:</strong> <a href="mailto:pdthang23594@gmail.com">pdthang23594@gmail.com</a></p>
-    <p><strong>Phone:</strong> +84903361753</p>
-    <p><strong>Location:</strong> Ho Chi Minh City, Vietnam</p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pdthang235/" target="_blank">linkedin.com/in/pdthang235</a></p>
-  </section>
+        <div class="about-grid">
+          <div class="card reveal">
+            <p>
+              Extensive experience in talent mapping, executive search, recruitment research, stakeholder
+              management and pipeline development within consulting, technology and Build-Operate-Transfer
+              (BOT) environments.
+            </p>
+            <p>
+              Trusted recruitment partner to enterprise clients delivering Build-Operate-Transfer (BOT)
+              and strategic technology hiring projects across Australia, Vietnam, Thailand and the Philippines.
+            </p>
+          </div>
+
+          <div class="card profile-facts reveal">
+            <div class="fact">
+              <div class="fact-label">Current Role</div>
+              <div class="fact-value">Principal Talent Sourcing Specialist</div>
+            </div>
+            <div class="fact">
+              <div class="fact-label">Organization</div>
+              <div class="fact-value">CBTW APAC</div>
+            </div>
+            <div class="fact">
+              <div class="fact-label">Experience</div>
+              <div class="fact-value">8+ Years</div>
+            </div>
+            <div class="fact">
+              <div class="fact-label">Location</div>
+              <div class="fact-value">Ho Chi Minh City, Vietnam</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise -->
+    <section id="expertise">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">Expertise</div>
+            <h2 class="section-title">Core capabilities.</h2>
+          </div>
+          <p class="section-intro">
+            A sourcing and research toolkit built around technology hiring, talent intelligence and
+            high-quality candidate pipelines.
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+          <article class="expertise-card reveal">
+            <div class="icon">TI</div>
+            <h3>Talent Intelligence</h3>
+            <p>Technical Recruitment Research, Talent Mapping, Executive Search and Talent Pipeline Development.</p>
+          </article>
+
+          <article class="expertise-card reveal">
+            <div class="icon">S</div>
+            <h3>Advanced Sourcing</h3>
+            <p>LinkedIn Recruiter, Advanced Boolean Search and Google X-Ray Search.</p>
+          </article>
+
+          <article class="expertise-card reveal">
+            <div class="icon">AI</div>
+            <h3>Recruitment Technology</h3>
+            <p>ATS Platforms, Recruitment CRM and AI-Assisted Sourcing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Hiring -->
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">Technology Coverage</div>
+            <h2 class="section-title">Technology hiring landscape.</h2>
+          </div>
+          <p class="section-intro">
+            Experience supporting technology hiring across engineering, AI, data, cloud, cybersecurity,
+            digital transformation and technology leadership.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <div class="tags">
+            <span class="tag accent">AI Engineering</span>
+            <span class="tag accent">AI Product</span>
+            <span class="tag">Software Engineering</span>
+            <span class="tag">Data Engineering</span>
+            <span class="tag">Cloud</span>
+            <span class="tag">Cybersecurity</span>
+            <span class="tag">Digital Transformation</span>
+            <span class="tag">Technology Leadership</span>
+            <span class="tag">Senior</span>
+            <span class="tag">Lead</span>
+            <span class="tag">Principal</span>
+            <span class="tag">Management</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">Career</div>
+            <h2 class="section-title">Professional experience.</h2>
+          </div>
+          <p class="section-intro">
+            Career progression across talent sourcing, technical recruitment research and APAC talent mapping.
+          </p>
+        </div>
+
+        <div class="timeline">
+
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Mar 2026 — Present</div>
+            <h3 class="timeline-role">Principal Talent Sourcing Specialist</h3>
+            <div class="timeline-company">CBTW APAC · Ho Chi Minh City, Vietnam</div>
+
+            <ul class="timeline-list">
+              <li>Elevated to Principal Talent Sourcing Specialist at CBTW APAC, focusing on enhancing recruitment strategies.</li>
+              <li>Committed to making significant contributions to the company's growth and talent acquisition efforts.</li>
+              <li>Collaborate with cross-functional teams to streamline recruitment processes and improve candidate experience.</li>
+            </ul>
+
+            <div class="achievement-box">
+              <strong>Key achievements</strong>
+              <ul class="timeline-list">
+                <li>Achieved 20 successful placements during H1 2026 across Software Engineering, AI, Data, Cybersecurity and Technology Leadership functions.</li>
+                <li>Surpassed Mid-Year 2026 sourcing target by 32.84%, Offer target by 29% (62 Offer Points achieved versus 48 target), and Placement target by 152% (60.5 Placement Points achieved versus 24 target).</li>
+                <li>Closed critical and niche technology positions including Principal AI Product Owner, Principal AI Engineer, AI Solution Consultant, Delivery Lead, Data Engineer and Cyber Security Manager.</li>
+                <li>Demonstrated capability in hiring Senior, Lead, Principal and Management-level technology professionals.</li>
+                <li>Built strategic talent pipelines supporting AI Engineering, Data Engineering, Cloud, Software Development, Cybersecurity and Digital Transformation initiatives.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Mar 2022 — Mar 2026</div>
+            <h3 class="timeline-role">Senior Talent Sourcing Specialist</h3>
+            <div class="timeline-company">CBTW APAC · Ho Chi Minh City, Vietnam</div>
+            <ul class="timeline-list">
+              <li>Partnered with APAC recruitment teams to build and maintain qualified talent pipelines for enterprise technology clients.</li>
+              <li>Supported technical hiring initiatives across Australia, Vietnam, Thailand and the Philippines through talent mapping, candidate research and market intelligence activities.</li>
+              <li>Key Clients: Mantel Group, Pepperstone, JobAdder, Fitness Passport, Hipages, ClickSend, CreditorWatch, Next Practice, Instaclustr, Infotrack, Deputy, CIMB.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Aug 2020 — Mar 2022</div>
+            <h3 class="timeline-role">Talent Sourcing Specialist</h3>
+            <div class="timeline-company">CBTW APAC · Ho Chi Minh City, Vietnam</div>
+            <ul class="timeline-list">
+              <li>Key Client: NAB – CBTW.</li>
+              <li>Executed sourcing campaigns supporting technology hiring initiatives.</li>
+              <li>Evaluated candidate suitability based on technical competencies, compensation expectations and stakeholder requirements.</li>
+              <li>Built talent pools and supported recruiter delivery teams across technology projects.</li>
+              <li>Collaborated closely with recruiters to increase sourcing effectiveness and recruitment outcomes.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Apr 2018 — Mar 2020</div>
+            <h3 class="timeline-role">Talent Sourcer</h3>
+            <div class="timeline-company">Vsource.io</div>
+            <ul class="timeline-list">
+              <li>Conducted candidate sourcing activities across US, UK, Ireland and ASEAN markets.</li>
+              <li>Sourced talent for software engineering, sales, marketing, management and executive-level positions.</li>
+              <li>Utilized advanced Boolean Search methodologies through LinkedIn, Google and niche talent platforms.</li>
+              <li>Supported executive search and recruitment research assignments across multiple industries.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Responsibilities -->
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">How I Work</div>
+            <h2 class="section-title">Core responsibilities.</h2>
+          </div>
+          <p class="section-intro">
+            A structured approach from understanding the role to building, qualifying and maintaining talent pipelines.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <div class="tags">
+            <span class="tag">Job Description Analysis</span>
+            <span class="tag">Technical Requirements</span>
+            <span class="tag">Boolean Search</span>
+            <span class="tag">Multi-Channel Search</span>
+            <span class="tag">Candidate Screening</span>
+            <span class="tag">Shortlisting</span>
+            <span class="tag">Recruiter Partnership</span>
+            <span class="tag">Talent Pool Management</span>
+            <span class="tag">CV Review</span>
+            <span class="tag">Pipeline Optimization</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Markets / Clients -->
+    <section>
+      <div class="container">
+        <div class="split-grid">
+
+          <div class="market-card reveal">
+            <div class="section-kicker">Markets</div>
+            <h3>Global talent sourcing coverage.</h3>
+            <div class="tags market-tags">
+              <span class="tag">Vietnam</span>
+              <span class="tag">Australia</span>
+              <span class="tag">US</span>
+              <span class="tag">UK</span>
+              <span class="tag">Ireland</span>
+              <span class="tag">ASEAN</span>
+              <span class="tag">APAC</span>
+              <span class="tag">Thailand</span>
+              <span class="tag">Philippines</span>
+            </div>
+          </div>
+
+          <div class="client-card reveal">
+            <div class="section-kicker">Selected Clients</div>
+            <h3 class="section-title" style="font-size: 24px; margin: 10px 0 15px;">Enterprise technology clients.</h3>
+            <p class="client-list">
+              Mantel Group · Pepperstone · JobAdder · Fitness Passport · Hipages · ClickSend ·
+              CreditorWatch · Next Practice · Instaclustr · Infotrack · Deputy · CIMB · NAB – CBTW
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <div class="container">
+        <div class="credentials">
+          <div class="card credential reveal">
+            <div class="section-kicker">Education</div>
+            <h3>Industrial University of HCMC</h3>
+            <p>Business Administration | Associate’s degree</p>
+          </div>
+
+          <div class="card credential reveal">
+            <div class="section-kicker">Certification</div>
+            <h3>LinkedIn Talent Sourcing Certification</h3>
+            <p>Professional certification in talent sourcing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">Let's Connect</div>
+            <h2 class="section-title">Build better talent pipelines.</h2>
+          </div>
+          <p class="section-intro">
+            Interested in connecting around technology recruitment, talent sourcing, talent intelligence or APAC hiring?
+          </p>
+        </div>
+
+        <div class="contact-box reveal">
+          <a class="contact-link" href="mailto:pdthang23594@gmail.com">pdthang23594@gmail.com</a>
+          <a class="contact-link" href="tel:+84903361753">+84 903 361 753</a>
+          <a class="contact-link" href="https://www.linkedin.com/in/pdthang235/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="contact-link" href="Thang_Pham_Duy_CV_Professional_2_Page.pdf" target="_blank" rel="noopener">Download CV ↓</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <footer>
-    <p>© 2026 Thang Pham Duy. All rights reserved.</p>
+    <div class="container footer-inner">
+      <div>© 2026 Thang Pham Duy. All rights reserved.</div>
+      <div>Principal Talent Sourcing Specialist · Ho Chi Minh City, Vietnam</div>
+    </div>
   </footer>
+
+  <script>
+    // Mobile navigation
+    const menuBtn = document.querySelector(".menu-btn");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuBtn.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(open));
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // Scroll reveal
+    const revealItems = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add("visible"));
+    }
+  </script>
+
 </body>
 </html>
